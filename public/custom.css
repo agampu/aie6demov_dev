@@ -1,0 +1,106 @@
+/* Custom styling for Daily Writing Buddy */
+
+/* Main background - more yellow but still light */
+body {
+    background-color: #FFF8DC !important;
+}
+
+/* Chat container background */
+.MuiContainer-root {
+    background-color: #FFF8DC !important;
+}
+
+/* Main content area */
+#main {
+    background-color: #FFF8DC !important;
+}
+
+/* Chat messages container */
+.MuiStack-root {
+    background-color: transparent !important;
+}
+
+/* Assistant messages - dark bluish grey background with white text */
+[data-testid="assistant-message"] {
+    background-color: #34495E !important;
+    color: #FFFFFF !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin: 8px 0 !important;
+}
+
+/* Assistant message text */
+[data-testid="assistant-message"] .MuiTypography-root {
+    color: #FFFFFF !important;
+}
+
+/* User messages - clean white background with dark text */
+[data-testid="user-message"] {
+    background-color: #FFFFFF !important;
+    color: #2C3E50 !important;
+    border-radius: 12px !important;
+    padding: 16px !important;
+    margin: 8px 0 !important;
+    border: 1px solid #E8E8E8 !important;
+}
+
+/* User message text */
+[data-testid="user-message"] .MuiTypography-root {
+    color: #2C3E50 !important;
+}
+
+/* Input field styling */
+.MuiInputBase-root {
+    background-color: #FFFFFF !important;
+    border-radius: 8px !important;
+}
+
+/* Header styling */
+.MuiAppBar-root {
+    background-color: #F4D03F !important;
+    color: #2C3E50 !important;
+}
+
+/* Header text */
+.MuiToolbar-root .MuiTypography-root {
+    color: #2C3E50 !important;
+    font-weight: 600 !important;
+}
+
+/* Send button */
+.MuiButton-root {
+    background-color: #F4D03F !important;
+    color: #2C3E50 !important;
+}
+
+.MuiButton-root:hover {
+    background-color: #F7DC6F !important;
+}
+
+/* Sidebar (if present) */
+.MuiDrawer-paper {
+    background-color: #FFFACD !important;
+}
+
+/* Loading messages */
+.MuiCircularProgress-root {
+    color: #F4D03F !important;
+}
+
+/* Scrollbar styling for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF8DC;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #F4D03F;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #F7DC6F;
+} 
