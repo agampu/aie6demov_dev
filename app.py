@@ -701,7 +701,7 @@ async def start_chat():
 
     # 3. Send initial welcome message
     await cl.Message(
-        content="Hello and welcome to writesomething.ai. I am your daily writing buddy. For today's 100 words, what kind of story, theme, or feeling are you considering?"
+        content="✍️ Welcome to WriteSomething.ai – your daily writing buddy. Tell me what feeling or topic you'd like to write about today."
     ).send()
     print("Chainlit on_chat_start complete. Welcome message sent.")
 
