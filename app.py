@@ -502,10 +502,18 @@ async def send_final_message_to_user(state: CreativeWriterAssistantState) -> Cre
 
     if not feedback_to_send: # Fallback, though mentor_llm should always provide it
         print("Send Final Message Warning: No mentor_feedback found. Sending default closing.")
-        feedback_to_send = "It has been a productive session. You did it. If you write, you are a writer. See you tomorrow."
+        feedback_to_send = "You did it. If you write, you are a writer. See you next time."
     
-    await cl.Message(content=feedback_to_send).send()
-    print(f"Send Final Message: Sent to user: '{feedback_to_send[:100]}...'")
+    # Add paragraph breaks around the closing line
+    CLOSING_LINE = "You did it. If you write, you are a writer. See you next time."
+    if CLOSING_LINE in feedback_to_send:
+        main, _ = feedback_to_send.rsplit(CLOSING_LINE, 1)
+        formatted_feedback = f"{main.strip()}\n\n{CLOSING_LINE}"
+    else:
+        formatted_feedback = feedback_to_send
+    
+    await cl.Message(content=formatted_feedback).send()
+    print(f"Send Final Message: Sent to user: '{formatted_feedback[:100]}...'")
     
     state['current_step_name'] = "SESSION_ENDED"
     state['error_message'] = None
